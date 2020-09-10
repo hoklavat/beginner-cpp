@@ -1,0 +1,437 @@
+****C++ PROGRAMMING****
+
+[Build Process]
+* Source Code (Editor)
+* Object Code (Compiler)
+* Object Code + Libraries (Linker)
+* Test/Debug (Debugger)
+* Executable File (Build)
+
+[Integrated Development Environment (IDE)]
+CodeLite, CodeBlocks, NetBeans, Eclipse, CLion, Dev-C++, KDevelop, Visual Studio, XCode
+
+[Compiler]
+MinGW GCC
+
+[Topics]
+* Fundamental: main function, comment (single-line, multi-line), variable, constant, array, pointer, reference, string, operator, declaration, initialization, expression, statement, control flow (sequence, selection, iteration, loop), function, enumeration, structure, naming conventions, static casting, floating-point, nesting statements, operator precedence, parameter passing (by-value, by-reference), recursion, infinite loops, scoping (local, global, static), type coercion (promotion, demotion), short circuit evaluation, associativity, stack, heap, dynamic memory allocation, inline functions, preprocessor directives
+* Exceptions: exception handling, compiler errors (syntax, semantic), warnings, linker errors, runtime errors, logic errors
+* Object Oriented: object, class, attribute, method, encapsulation, constructor (copy/move), destructor, operator overloading, inheritance, composition, polymorphism (static/dynamic binding, overriding, virtual function, finalizing), abstraction (interface), namespace
+* Other: smart pointer, standard template library, i/o stream, generic programming
+
+[Keywords]
+alignas, alignof, and, and_eq, asm, atomic_cancel, atomic_commit, atomic_noexcept, auto, bitand, bitor, bool, break, case, catch, char, char16_t, char32_t, class, compl, concept, const, consteval, constexpr, const_cast, continue, co_await, co_return, co_yield, decltype, default, delete, do, double, dynamic_cast, else, enum, explicit, export, extern, false, float, for, friend, goto, if, import, inline, int, long, module, mutable, namespace, new, noexcept, not, not_eq, nullptr, operator, or, or_eq, private, protected, public, reflexpr, register, reinterpret_cast, requires, return, short, signed, sizeof, static, static_assert, static_cast, struct, switch, synchronized, template, this, thread_local, throw, true, try, typedef, typeid, typename, union, unsigned, using, virtual, void, volatile, wchar_t, while, xor, xor_eq
+
+[Preprocessor Directives]
+include, if/elif/else/endif, ifdef/ifndef/define/undef, line, error, pragma
+
+[Explicit Namespace]
+Scope Resolution Operator (::)
+
+[Implicit Namespace]
+using namespace std; (Whole Namespace)
+using std::cout; (Specific Member)
+
+[Basic Input/Output]
+cout, cin, cerr, clog
+Insertion Operator (<<), cout <<
+Extraction Operator (>>), cin >>
+cin.getline(s1, 20); (read 20 characters)
+getline(cin, s1); (read entire line)
+getline(cin, s1, ‘x’); (read until x, except x)
+
+[Primitive Types]
+* character: char, char16_t, char32_t, wchar_t
+* integer: signed, unsigned short int, int, long int, long long int
+* floating point: float, double, long double
+* boolean: bool (true, false)
+* climits, cfloat (limits)
+
+[Initialization]
+int age; (Uninitialized)
+int age = 21; (C-Type Initialization)
+int age(21); (Constructor Initialization)
+int age{21}; (List Initialization)
+int age{}; (Zero Initialization)
+
+[Constants]
+* Literal Constants (U, L, LL, F, \n, \r, \t, \b, \’, \”, \\)
+* Declared Constants (const)
+* Constant Expressions (constexpr)
+* Enumerated Constants (enum)
+* Defined Constants (define)
+
+[Vectors]
+#include <vector>
+vector<char> vowels;
+vector<char> vowels(8); (8-elements, 0 initialization)
+vector<char> vowels(8, 100); (8-Elements, 100 initialization)
+vector<char> vowels{‘a’, ‘e’, ‘ý’, ‘i’, ‘o’, ‘ö’, ‘u’, ‘ü’};
+v[10];
+v.at(10);
+v.push_back(‘a’);
+v.size();
+
+[Multiple Assignment]
+num1 = num2 = 1000;
+
+[Type Coercion]
+promotion, demotion
+lower op higher (lower promoted to higher)
+lower = higher (higher demoted to lower)
+
+[True(1)/False(0)]
+cout << std::boolalpha;
+cout << std::noboolalpha;
+
+[Three-Way Comparision]
+<=>
+
+[Program Flow Control]
+Sequence(if-else), Selection(switch-case-default), Iteration(for, while, do-while)
+
+[Range Based For Loop]
+for(int element: array)
+
+[Standard Precision]
+#include <iomanip>
+cout << fixed << setprecision(2);
+cout.fixed();
+cout.precision(2);
+
+[Static Casting]
+static_cast<double>(integer_1)/integer_2 (error check)
+(double)integer_1/integer_2 (no error check)
+
+[Character Functions]
+#include <cctype>
+isalpha, isnum, isalnum, isupper, islower, isprint, ispunct, isspace, tolower, toupper
+
+[Strings]
+#include <cstring> (C-Style Strings)
+strcpy, strcat, strcmp, strlen
+char s1[8]{"Baris"};
+cin.getline(s1, 20);
+
+#include <string> (C++ Strings)
+std::string
+substr, find, erase, clear, length
+string s1; //empty string
+string s2{"John McClane Die Hard", 12};
+string s3{s2, 6}; //first six elements
+string s4{s2, 0, 5}; //five elements after 0 position
+string s5(10, 'B'); //ten times B
+s2[0] = s2.at(0)
+s1 + s2, s1 < s2 (arithmetic and comparision operations)
+
+[Function]
+Prototype, Definition, Parameters (Pass-By-Value, Pass-By-Ref, Default Values), Return Value, Overloading, Inline, Auto Return Type
+Definition: Name + Parameters + Return Type + Body
+Formal Parameter (int x)
+Actual Parameter (10, Argument)
+Function Overloading: same return type, single default argument
+
+[Scoping]
+local (block), global, static
+
+[Stack]
+Last in First Out (LIFO), Push, Pop, Stack Overflow, Function Activation Record, Local Variables, Function Parameters
+
+[Pointer]
+int n;
+int *p; //address to anywhere
+int *p{nullptr}; //address to nowhere
+p = nullptr; //address to nowhere
+p = &n; //reference
+p = &n2; //dereference
+n: value of n
+*p: value of n
+&n: address of n
+p: address of n
+(p + 1): //increment address by size of type, not by 1 (address increment)
+sizeof n: size of n in bytes
+sizeof p: size of p in bytes (address holder size, 4-bytes)
+
+[Pointer/Array]
+int a[];
+*a: a[0] (value of first element)
+a: &a[0] (address of first element)
+*(a + 1) = a[1] (offset/subscript notations)
+
+[Pointer/Constant]
+const int *p{&n} //pointer to constant
+*p = 200; //error
+p = &n2; //ok
+
+const *int p{&n} //constant pointer to variable
+*p = 200; //ok
+p = &n2; //error
+
+const * int *p{&n} //constant pointer to constant
+*p = 200; //error
+p = &n2; //error
+
+[Pointer Arithmetic]
+p++, p--, p+1, p-1, p2-p1, p1==p2, *p1==*p2
+
+[Dynamic Memory Allocation]
+int *p{nullptr};
+p = new int; //allocate an integer on heap
+delete p; //free allocated space
+p = new int[size]; //allocate integer array on heap
+delete [] p; //free allocated space
+
+[Reference]
+int n{100};
+int &r{n};
+
+[l-Value/r-Value]
+x = 100;
+x: l-Value (addressable, assignable, modifiable, reference)
+100: r-Value (non-addressable, non-assignable, literal, non-reference)
+int &l_ref = x (l-value reference)
+int &&r_ref = 300 (r-value reference)
+int &&r_ref = x (error)
+
+[Object Oriented Advantages]
+understand, maintain, extend, debug/test, reuse, unfragile, abstraction, encapsulation, information hiding, inheritance, method overriding, polymorphism
+
+[Struct]
+* Public Members by Default
+* Passive Objects
+* No Methods
+
+[Class]
+* Attribute (Data)
+* Method (Function)
+   - Prototype
+   - Declaration
+   - Implementation (Inline/Outside)
+* Object (Instance of Class)
+* Access Modifiers (Encapsulation)
+   - public (Everywhere)
+   - private (Self/Friend)
+   - protected (Self/Derived)
+* Constructor
+   - Initialization
+   - Overloading
+   - Delegating
+   - Copy Constructor (Shallow/Deep)
+   - Move Constructor
+* Destructor
+* Constant Method
+* Static Members
+* Friend (Function/Method/Class)
+* Operator Overloading
+* Composition
+* Inheritance
+* Polymorphism
+   - Static Binding (Compile-Time, Early)
+* Function Overloading
+* Operator Overloading
+   - Dynamic Binding (Run-Time, Late)
+* Function Overriding (override)
+   - Base Class Pointer
+   - Base Class Reference
+   - Virtual Function
+   - Pure Virtual Function (Abstract Base Class)
+   - Virtual Destructor
+   - Finalizing (final)
+   - Interface
+
+[Class Include Guard]
+#ifndef _ACCOUNT_H
+#define _ACCOUNT_H
+//Account Class Declaration
+#endif
+
+#pragma once 
+
+[Object Copying Cases]
+* Pass by Value to a Function
+* Return Value from a Function
+* New Object from Existing Object
+
+[None Overloadable Operators]
+::
+:?
+.*
+.
+sizeof
+
+[Inheritance]
+access modifiers: public/private(default)/protected
+protected: accessible from base/derived classes, not accessible by objects of base/derived classes
+public inheritance: public:public, protected:protected, private:not accessible
+protected inheritance: public:protected, protected:protected, private: not accessible
+private inheritance: public:private, protected:private, private: not accessible
+derived class doesn’t inherit: base class constructor/destructor/overloaded assignment operators/friend functions
+multiple inheritance: derived:base1, base2, ... 
+
+[Method Overriding]
+override base class virtual functions (virtual).
+exactly same signature (overriding, dynamic).
+same name different signature (redefinition, static).
+override: compiler alerts if signatures are not same.
+
+[Finalizing (final)]
+restrain class from being derived by another class.
+restrain method to be overriden in derived class.
+
+[Abstract Class/Pure Virtual Function]
+abstract class cannot be instantiated.
+all methods should be declared as pure virtual functions.
+if class derived from abstract class is not overrided it is also an abstract class, otherwise concrete class.
+virtual void function() = 0;  //pure virtual function
+
+[Interface]
+single implementation for multiple overridden methods
+
+[Smart Pointers]
+#include <memory>
+Types: unique (unique_ptr), shared (shared_ptr), weak (weak_ptr), auto (auto_ptr)
+Features: objects, heap allocation, automatic deletion, get(), reset(), Resource Acquisition Is Initialization (RAII)
+Unique: make_unique<type>(), unique pointing, one-to-one, no assignment, no copy, move
+Shared: make_shared<type>(), use_count(), shared pointing, multiple-to-one, assignment, copy, move, counter
+Weak: shared_ptr, no counter, temporary visit
+
+[Exception Handling]
+Reasons: insufficient/missing resources, invalid operations, range violations, underflows/overflows, illegal data, ... 
+Stages: exception, throwing (raising) exception, catching (handling) exception
+Members: throw, try, catch(Exception ex)
+stack-unwinding, user-defined exceptions, class-level exceptions, exception class inheritance (std::exception)
+
+[Standart Library Exception Class Hierarchy]
+* Exception
+   - bad_typeid
+   - bad_cast(bad_any_cast)
+   - bad_weak_ptr
+   - bad_function_call
+   - bad_exception
+   - bad_alloc(bad_array_new_length, bad_array_length)
+   - bad_optional_access
+   - bad_variant_access
+   - runtime error
+      * domain_error
+      * out_of_range
+      * length_error
+      * invalid_argument
+      * future_error
+   - logic error
+      * overflow_error
+      * underflow_error
+      * range_error
+      * regex_error
+      * system_error(ios_base_faliure, filesystem_error)
+
+[I/O and Streams]
+Headers: iostream (Stream), fstream (File Stream), sstream (String Stream), iomanip (Stream Manipulation)
+Classes: ios (Basic), File Stream (fstream, ifstream, ofstream), String (stringstream, istringstream, ostringstream)
+Global Stream Objects: cin (Input Device), cout (Output Device), cerr (Error Device), clog (Log Device)
+Common Stream Manipulators: Boolean (boolalpha, noboolalpha), Integer (dec, hex, oct, showbase, noshowbase, showpos, noshowpos, uppercase, nouppercase), Floating Point (fixed, scientific, setprecision, showpoint, noshowpoint, showpos, noshowpos, uppercase, nouppercase), Field Width/Justification/Fill (setw, left, right, internal, setfill), Others (endl, flush, skipws, noskipws, ws)
+File Stream: ifstream, open(), is_open(), eof(), get(), put(), getline(), close(), ios::binary/text
+File Write: ofstream, ios::trunc/app/ate
+
+[Standart Template Library (STL)]
+* Generic/Meta Programming
+   - Preprocessor Macros (#define)
+   - Function Templates
+   - Class Templates
+* STL Containers
+   - Sequence (array, vector, list, forward_list, deque)
+   - Associative (set, multiset, map, multimap)
+   - Adapter (stack, queue, priority queue)
+* STL Iterators (forward, reverse, by value, by reference, constant)
+   - Input
+   - Output
+   - Forward
+   - Bi-Directional
+   - Random Access
+* STL Algorithms (find, max, count, count_if, accumulate, sort, all_of, transform, ...)
+
+#include <utility> //std::pair
+#include <algorithm> // sort, reverse, accumulate, max, …
+less than <, equality == operators must be implemented for STL objects.
+
+[Iterators]
+iterator (begin/end), reverse iterator (rbegin/rend), constant iterator (cbegin/cend), constant reverse iterator (crbegin/crend)
+operations with iterators: ++, --, =, *, ->, ==, !=, +, -, +=, -=, <, <=, >, >=
+iterators must be declared based on container type: container_type::iterator_type iterator_name;
+
+[Common Container Features]
+default/overloaded/copy/move constructors, destructor, copy/move assignment, size, empty, insert, comparision operators, swap, erase, clear
+
+[Array]
+#include <array>
+std::array
+Features: fixed size, direct access, raw array, all iterators
+Members: size, at, [], front, back, empty, max_size, fill, swap, data
+
+[Vector]
+#include <vector>
+std::vector
+Features: dynamic size, direct access, rapid insertion/deletion, element insertion/removal, all iterators
+Members: front, back, push_back, pop_back, emplace_back, size, capacity, max_size, at, [], empty, swap, sort, find, insert, shrink_to_fit, reserve, back_inserter, copy, copy_if
+
+[Deque]
+#include <deque>
+std::deque
+Features: dynamic size, direct access, rapid insertion/deletion, element insertion/removal, all iterators
+Members: front, back, push_back, push_front, pop_back, pop_front, emplace_back, emplace_front, size, max_size, at, [], clear
+
+[List/Forward List]
+#include <list>
+std::list
+Features: sequence, non contiguous, bidirectional, dynamic size, no direct access, rapid insert/delete, all iterators
+Members: size, max_size, front, back, push_back, push_front, pop_back, pop_front, emplace_back, emplace_front, insert, erase, resize, find
+
+#include <forward_list>
+std::forward_list
+Features: unidirectional, no reverse iterators (others common)
+Members: front, max_size, push_front, pop_front, emplace_front, insert_after, emplace_after, erase_after, resize
+
+[Associative Containers]
+sets (set, multiset, unorderer_set, unordered_multiset)
+maps (map, multimap, unordered_map, unordered_multimap)
+
+[Set]
+#include <set>
+std::set //no duplicate elements
+std::multiset //duplicate elements
+Features: key, ordered, all iterators
+Members: size, max_size, insert, erase, begin, end, count, clear, empty, emplace
+
+#include <unordered_set>
+std::unordered_set //no duplicate elements
+std::unordered_multiset //duplicate elements
+Features: unordered, no modifiable elements, no reverse iterators
+
+[Map]
+#include <map>
+std::map //no duplicate elements
+std::multimap //duplicate elements
+std::unordered_map //unordererd, no duplicate elements, no reverse iterators
+std::unordered_multimap //unordered, duplicate elements, no reverse iterators
+Features: key-value pairs, unique keys, direct element access, all iterators
+Members: size, max_size, insert, make_pair, at, [], erase, find, begin, end, count, clear, empty
+
+[Stack]
+#include <stack>
+std::stack
+Features: last-in first-out, vector/list/deque adapters, no iterators
+Members: push, pop, top, empty, size
+
+[Queue]
+#include <queue>
+std::queue
+Features: first-in first-out, list/deque adapters, no iterators
+Members: push, pop, front, back, empty, size
+
+[Priority Queue]
+#include <queue>
+std::priority_queue
+Features: priority, largest at front, default type vector, no iterators
+Members: push, pop (greatest), top (greatest), empty, size
+
+
+
