@@ -1,245 +1,357 @@
 ****C++ PROGRAMMING****
 
-[Build Process]
+[BUILD PROCESS]
 * Source Code (Editor)
 * Object Code (Compiler)
 * Object Code + Libraries (Linker)
 * Test/Debug (Debugger)
 * Executable File (Build)
 
-[Integrated Development Environment (IDE)]
-CodeLite, CodeBlocks, NetBeans, Eclipse, CLion, Dev-C++, KDevelop, Visual Studio, XCode
+[INTEGRATED DEVELOPMENT ENVIRONMENT (IDE)]
+* CodeLite
+* CodeBlocks
+* NetBeans
+* Eclipse
+* CLion
+* Dev-C++
+* KDevelop
+* Visual Studio
+* XCode
 
-[Compiler]
-MinGW GCC
+[COMPILER]
+* MinGW GCC
 
-[Topics]
-* Fundamental: main function, comment (single-line, multi-line), variable, constant, array, pointer, reference, string, operator, declaration, initialization, expression, statement, control flow (sequence, selection, iteration, loop), function, enumeration, structure, naming conventions, static casting, floating-point, nesting statements, operator precedence, parameter passing (by-value, by-reference), recursion, infinite loops, scoping (local, global, static), type coercion (promotion, demotion), short circuit evaluation, associativity, stack, heap, dynamic memory allocation, inline functions, preprocessor directives
-* Exceptions: exception handling, compiler errors (syntax, semantic), warnings, linker errors, runtime errors, logic errors
-* Object Oriented: object, class, attribute, method, encapsulation, constructor (copy/move), destructor, operator overloading, inheritance, composition, polymorphism (static/dynamic binding, overriding, virtual function, finalizing), abstraction (interface), namespace
-* Other: smart pointer, standard template library, i/o stream, generic programming
+[TOPICS]
+* Fundamental Concepts:
+   - comment
+   - naming conventions
+   - declaration
+   - initialization
+   - expression
+   - statement
+   - nesting
+   - casting (promotion, demotion)
+   - precedence
+   - scoping (local, global, static)
+   - preprocessor
+   - variable (integer, floating-point, boolean, character, string, static, constant, pointer, reference, array, enumeration, structure, object)
+   - operator
+   - function
+   - function arguments (by-value, by-reference)
+   - function overloading
+   - function as argument
+   - control flow (sequence, selection, iteration, loop)
+   - string
+   - recursion
+   - infinite loop
+   - short circuit evaluation
+   - lambda expression
+   - associativity
+   - dynamic memory allocation (stack, heap, new, delete, custom deleter)
+   - inline functions
 
-[Keywords]
-alignas, alignof, and, and_eq, asm, atomic_cancel, atomic_commit, atomic_noexcept, auto, bitand, bitor, bool, break, case, catch, char, char16_t, char32_t, class, compl, concept, const, consteval, constexpr, const_cast, continue, co_await, co_return, co_yield, decltype, default, delete, do, double, dynamic_cast, else, enum, explicit, export, extern, false, float, for, friend, goto, if, import, inline, int, long, module, mutable, namespace, new, noexcept, not, not_eq, nullptr, operator, or, or_eq, private, protected, public, reflexpr, register, reinterpret_cast, requires, return, short, signed, sizeof, static, static_assert, static_cast, struct, switch, synchronized, template, this, thread_local, throw, true, try, typedef, typeid, typename, union, unsigned, using, virtual, void, volatile, wchar_t, while, xor, xor_eq
+* Exception Handling: 
+   - compiler errors (syntax, semantic)
+   - warnings
+   - linker errors
+   - runtime errors
+   - logical errors
 
-[Preprocessor Directives]
-include, if/elif/else/endif, ifdef/ifndef/define/undef, line, error, pragma
+* Object-Oriented Concepts: 
+   - object
+   - class
+   - instance
+   - property (attribute)
+   - method
+   - encapsulation
+   - constructor
+   - copy constructor
+   - move constructor
+   - destructor
+   - operator overloading
+   - friend functions
+   - inheritance
+   - composition
+   - polymorphism (static/dynamic bind, override, virtual function, final)
+   - abstraction (interface)
+   - namespace
 
-[Explicit Namespace]
-Scope Resolution Operator (::)
+* Other: 
+   - smart pointers
+   - standard template library
+   - input/output streams
+   - generic programming
 
-[Implicit Namespace]
-using namespace std; (Whole Namespace)
-using std::cout; (Specific Member)
+[KEYWORDS]
+alignas, alignof, and, and_eq, asm, atomic_cancel, atomic_commit, atomic_noexcept, auto, bitand, bitor, bool, break, case, catch, char, char16_t, char32_t, 
+class, compl, concept, const, consteval, constexpr, const_cast, continue, co_await, co_return, co_yield, decltype, default, delete, do, double, dynamic_cast, 
+else, enum, explicit, export, extern, false, float, for, friend, goto, if, import, inline, int, long, module, mutable, namespace, new, noexcept, not, not_eq, 
+nullptr, operator, or, or_eq, private, protected, public, reflexpr, register, reinterpret_cast, requires, return, short, signed, sizeof, static, static_assert, 
+static_cast, struct, switch, synchronized, template, this, thread_local, throw, true, try, typedef, typeid, typename, union, unsigned, using, virtual, void, 
+volatile, wchar_t, while, xor, xor_eq
 
-[Basic Input/Output]
-cout, cin, cerr, clog
-Insertion Operator (<<), cout <<
-Extraction Operator (>>), cin >>
-cin.getline(s1, 20); (read 20 characters)
-getline(cin, s1); (read entire line)
-getline(cin, s1, ‘x’); (read until x, except x)
+[PREPROCESSOR DIRECTIVES]
+   - include
+   - if/elif/else/endif
+   - ifdef/ifndef/define/undef
+   - line
+   - error
+   - pragma
 
-[Primitive Types]
+[EXPLICIT NAMESPACE]
+   - Scope Resolution Operator (::)
+   - std::cout << "Hello World!;
+
+[IMPLICIT NAMESPACE]
+   - using namespace std; (import whole namespace)
+   - using std::cout; (import specific part of namespace)
+
+[BASIC INPUT/OUTPUT]
+   - cout, cin, cerr, clog
+   - insertion operator (<<); cout <<
+   - extraction operator (>>); cin >>
+   - cin.getline(s1, 20); (read 20 characters from standard input device.)
+   - getline(cin, s1); (read until pressed enter.)
+   - getline(cin, s1, ‘x’); (read until pressed x.)
+
+[PRIMITIVE TYPES]
 * character: char, char16_t, char32_t, wchar_t
 * integer: signed, unsigned short int, int, long int, long long int
 * floating point: float, double, long double
 * boolean: bool (true, false)
-* climits, cfloat (limits)
+* <climits> (limits of integer types) 
+* <cfloat> (limits of floating-point types)
 
-[Initialization]
-int age; (Uninitialized)
-int age = 21; (C-Type Initialization)
-int age(21); (Constructor Initialization)
-int age{21}; (List Initialization)
-int age{}; (Zero Initialization)
+[INITIALIZATION]
+* int age; (uninitialized)
+* int age = 21; (c-type initialization)
+* int age(21); (constructor initialization)
+* int age{21}; (list initialization)
+* int age{}; (zero initialization)
 
-[Constants]
-* Literal Constants (U, L, LL, F, \n, \r, \t, \b, \’, \”, \\)
+[CONSTANTS]
+* Literal Constants: (unsigned (U), long (L), long long (LL), float (F), newline (\n), carriage return (\r), tab (\t), backspace (\b), quote (\’), double quore (\"), backslash (\\))
 * Declared Constants (const)
 * Constant Expressions (constexpr)
 * Enumerated Constants (enum)
 * Defined Constants (define)
 
-[Vectors]
-#include <vector>
-vector<char> vowels;
-vector<char> vowels(8); (8-elements, 0 initialization)
-vector<char> vowels(8, 100); (8-Elements, 100 initialization)
-vector<char> vowels{‘a’, ‘e’, ‘ý’, ‘i’, ‘o’, ‘ö’, ‘u’, ‘ü’};
-v[10];
-v.at(10);
-v.push_back(‘a’);
-v.size();
+[VECTOR]
+* #include <vector>
+* vector<char> v;
+* vector<char> v(8); //8-elements with initial value 0.
+* vector<char> v(8, 100); //8-elements with initial value 100.
+* vector<char> v{‘a’, ‘e’, ‘ý’, ‘i’, ‘o’, ‘ö’, ‘u’, ‘ü’}; //vector containing vowels.
+* v[10]; //value of 11th element of the vector.
+* v.at(10); //value of 11th element of the vector.
+* v.push_back(‘a’); //add a new element at the end of the vector.
+* v.size(); //number of elements in the vector.
 
-[Multiple Assignment]
-num1 = num2 = 1000;
+[MULTIPLE ASSIGNMENT]
+* num1 = num2 = 1000;
 
-[Type Coercion]
-promotion, demotion
-lower op higher (lower promoted to higher)
-lower = higher (higher demoted to lower)
+[TYPE COERCION]
+* lower op higher (promotion, lower promoted to higher, example: int to long)
+* lower = higher (demotion, higher demoted to lower, example: long to int)
 
-[True(1)/False(0)]
-cout << std::boolalpha;
-cout << std::noboolalpha;
+[BOOLEAN REPRESENTATION]
+* cout << std::boolalpha; //true, false
+* cout << std::noboolalpha; //1, 0
 
-[Three-Way Comparision]
-<=>
+[THREE-WAY COMPARISION]
+* A<=>B
+* A<B :-1
+* A=B : 0
+* A>B : 1
 
-[Program Flow Control]
-Sequence(if-else), Selection(switch-case-default), Iteration(for, while, do-while)
+[PROGRAM FLOW CONTROL]
+* Sequence(if-else)
+* Selection(switch-case-default)
+* Iteration(for, while, do-while)
 
-[Range Based For Loop]
-for(int element: array)
+[RANGE BASED FOR LOOP]
+* for(int element: array)
 
-[Standard Precision]
-#include <iomanip>
-cout << fixed << setprecision(2);
-cout.fixed();
-cout.precision(2);
+[STANDARD PRECISION]
+* #include <iomanip>
+* cout << fixed << setprecision(2); //set number of digits after decimal point.
+* cout.fixed();
+* cout.precision(2);
 
-[Static Casting]
-static_cast<double>(integer_1)/integer_2 (error check)
-(double)integer_1/integer_2 (no error check)
+[STATIC CASTING]
+* static_cast<double>(var1)/var2 //error check available.
+* (double)var1/var2 //no error check. possible data loss.
 
-[Character Functions]
-#include <cctype>
-isalpha, isnum, isalnum, isupper, islower, isprint, ispunct, isspace, tolower, toupper
+[CHARACTER]
+* #include <cctype>
+* isalpha, isnum, isalnum, isupper, islower, isprint, ispunct, isspace, tolower, toupper
 
-[Strings]
-#include <cstring> (C-Style Strings)
-strcpy, strcat, strcmp, strlen
-char s1[8]{"Baris"};
-cin.getline(s1, 20);
+[C-STYLE STRING]
+* #include <cstring> //c-style string operations
+* functions: strcpy, strcat, strcmp, strlen
+* char s[8]{"Macit"}; //fixed 8-bytes are allocated, 5 is used.
+* cin.getline(s, 20); //store 20 characters from standard input into s.
 
-#include <string> (C++ Strings)
-std::string
-substr, find, erase, clear, length
-string s1; //empty string
-string s2{"John McClane Die Hard", 12};
-string s3{s2, 6}; //first six elements
-string s4{s2, 0, 5}; //five elements after 0 position
-string s5(10, 'B'); //ten times B
-s2[0] = s2.at(0)
-s1 + s2, s1 < s2 (arithmetic and comparision operations)
+[C++ STRING]
+* #include <string> //c++ string operations
+* std::string //using namespace std;
+* methods: substr, find, erase, clear, length
+* string s1; //empty string
+* string s2{"Foo Bar So Hard", 15};
+* string s3{s2, 3}; //first 3 elements. Foo.
+* string s4{s2, 5, 3}; //five elements after 3rd position. Bar.
+* string s5(10, 'B'); //ten times B.
+* s[0] = s.at(0) //element indexing. similar to vector.
+* s1 + s2, s1 < s2 //arithmetic and comparision operations are available.
 
-[Function]
-Prototype, Definition, Parameters (Pass-By-Value, Pass-By-Ref, Default Values), Return Value, Overloading, Inline, Auto Return Type
-Definition: Name + Parameters + Return Type + Body
-Formal Parameter (int x)
-Actual Parameter (10, Argument)
-Function Overloading: same return type, single default argument
+[FUNCTION]
+* prototype
+* definition
+* parameters (value, reference, default)
+* return type
+* overloading (same return type, single default argument)
+* inline implementation
+* auto return type
+* definition: return type + name + parameters + body
+* formal parameter: f(int x)
+* actual parameter (argument): f(10)
 
-[Scoping]
-local (block), global, static
+[SCOPING]
+* local
+* global
+* static
 
-[Stack]
-Last in First Out (LIFO), Push, Pop, Stack Overflow, Function Activation Record, Local Variables, Function Parameters
+[STACK]
+* last in first out (LIFO)
+* push: put on top.
+* pop: get from top.
+* stack overflow
+* function activation record
+* local variables
+* function parameters
 
-[Pointer]
-int n;
-int *p; //address to anywhere
-int *p{nullptr}; //address to nowhere
-p = nullptr; //address to nowhere
-p = &n; //reference
-p = &n2; //dereference
-n: value of n
-*p: value of n
-&n: address of n
-p: address of n
-(p + 1): //increment address by size of type, not by 1 (address increment)
-sizeof n: size of n in bytes
-sizeof p: size of p in bytes (address holder size, 4-bytes)
+[POINTER]
+* int n;
+* int *p; //address to anywhere.
+* int *p{nullptr}; //address to nowhere.
+* p = nullptr; //address to nowhere.
+* p = &n1; //reference, hold address of n1.
+* p = &n2; //dereference, release address of n1, hold adress of n2.
+* n: value of n
+* *p: value of n
+* &n: address of n
+* p: address of n
+* (p + 1): //increment address by size of type, not by 1.
+* sizeof n: size of n in bytes.
+* sizeof p: size of p in bytes. (address holder size)
 
-[Pointer/Array]
-int a[];
-*a: a[0] (value of first element)
-a: &a[0] (address of first element)
-*(a + 1) = a[1] (offset/subscript notations)
+[POINTER TO ARRAY]
+* int a[];
+* *a: a[0] (value of first element)
+* a: &a[0] (address of first element)
+* *(a + 1) = a[1] (offset/subscript notations)
 
-[Pointer/Constant]
-const int *p{&n} //pointer to constant
-*p = 200; //error
-p = &n2; //ok
+[POINTER TO CONSTANT]
+* const int* p{&n}
+* *p = 200; //error
+* p = &n2; //ok
 
-const *int p{&n} //constant pointer to variable
-*p = 200; //ok
-p = &n2; //error
+[CONSTANT POINTER TO VARIABLE]
+* const* int p{&n}
+* *p = 200; //ok
+* p = &n2; //error
 
-const * int *p{&n} //constant pointer to constant
-*p = 200; //error
-p = &n2; //error
+[CONSTANT POINTER TO CONSTANT]
+* const* int *p{&n} //constant pointer to constant
+* *p = 200; //error
+* p = &n2; //error
 
-[Pointer Arithmetic]
-p++, p--, p+1, p-1, p2-p1, p1==p2, *p1==*p2
+[POINTER ARITHMETIC]
+* p++ (increment adress by sizeof type.)
+* p-- (decrement adress by sizeof type.)
+* p+1 (increment adress by 1 * sizeof type.)
+* p-1 (decrement adress by 1 * sizeof type.)
+* p2-p1 (difference of two addresses in bytes.)
+* p1==p2 (address equality.)
+* *p1==*p2 (value equality.)
 
-[Dynamic Memory Allocation]
-int *p{nullptr};
-p = new int; //allocate an integer on heap
-delete p; //free allocated space
-p = new int[size]; //allocate integer array on heap
-delete [] p; //free allocated space
+[DYNAMIC MEMORY ALLOCATION]
+* int *p{nullptr};
+* p = new int; //allocate space on heap in sizeof one integer.
+* delete p; //free allocated space.
+* p = new int[size]; //allocate integer array on heap
+* delete [] p; //free allocated space
 
-[Reference]
-int n{100};
-int &r{n};
+[L-VALUE REFERENCE]
+* int n{100};
+* int &r{n}; //whatever change made on r reflects to n.
 
-[l-Value/r-Value]
-x = 100;
-x: l-Value (addressable, assignable, modifiable, reference)
-100: r-Value (non-addressable, non-assignable, literal, non-reference)
-int &l_ref = x (l-value reference)
-int &&r_ref = 300 (r-value reference)
-int &&r_ref = x (error)
+[R-VALUE REFERENCE]
+* x = 100;
+* x: l-Value (addressable, assignable, modifiable, reference)
+* 100: r-Value (non-addressable, non-assignable, literal, non-reference)
+* int &l_ref = x (l-value reference)
+* int &&r_ref = 300 (r-value reference)
+* int &&r_ref = x (error)
 
-[Object Oriented Advantages]
-understand, maintain, extend, debug/test, reuse, unfragile, abstraction, encapsulation, information hiding, inheritance, method overriding, polymorphism
+[ADVANTAGES of OBJECT-ORIENTED PROGRAMMING]
+* understandable
+* maintainable
+* extendable
+* easier debugging and testing
+* reusable
+* unfragile
+* abstraction
+* encapsulation
+* information hiding
+* inheritance
+* method overriding
+* polymorphism
 
-[Struct]
-* Public Members by Default
-* Passive Objects
-* No Methods
+[STRUCT]
+* member is public by default.
+* passive object.
+* no method.
 
-[Class]
-* Attribute (Data)
-* Method (Function)
-   - Prototype
-   - Declaration
-   - Implementation (Inline/Outside)
-* Object (Instance of Class)
-* Access Modifiers (Encapsulation)
-   - public (Everywhere)
-   - private (Self/Friend)
-   - protected (Self/Derived)
-* Constructor
-   - Initialization
-   - Overloading
-   - Delegating
-   - Copy Constructor (Shallow/Deep)
-   - Move Constructor
-* Destructor
-* Constant Method
-* Static Members
-* Friend (Function/Method/Class)
-* Operator Overloading
-* Composition
-* Inheritance
-* Polymorphism
-   - Static Binding (Compile-Time, Early)
-* Function Overloading
-* Operator Overloading
-   - Dynamic Binding (Run-Time, Late)
-* Function Overriding (override)
-   - Base Class Pointer
-   - Base Class Reference
-   - Virtual Function
-   - Pure Virtual Function (Abstract Base Class)
-   - Virtual Destructor
-   - Finalizing (final)
-   - Interface
+[CLASS]
+* attribute (data)
+* method (function)
+   - prototype
+   - declaration
+   - implementation (inline/outside)
+* object (instance of class)
+* access modifiers (encapsulation)
+   - public (visible everywhere)
+   - private (visible by self/friend)
+   - protected (visible by self/derived)
+* constructor
+   - initialization
+   - overloading
+   - delegating
+   - copy constructor (shallow copy, deep copy)
+   - move constructor
+* destructor
+* constant method
+* static members
+* friend (function/method/class)
+* operator overloading
+* function overloading
+* composition
+* inheritance
+* polymorphism
+   - static binding (compile-time, early)
+   - dynamic binding (run-time, late)
+* function override
+   - abstract class
+   - base class pointer
+   - base class reference
+   - virtual function
+   - pure virtual function
+   - virtual destructor
+   - finalizing
+   - interface
 
-[Class Include Guard]
+[INCLUDE GUARD]
 #ifndef _ACCOUNT_H
 #define _ACCOUNT_H
 //Account Class Declaration
@@ -247,17 +359,13 @@ understand, maintain, extend, debug/test, reuse, unfragile, abstraction, encapsu
 
 #pragma once 
 
-[Object Copying Cases]
-* Pass by Value to a Function
-* Return Value from a Function
-* New Object from Existing Object
+[CASES of OBJECT COPYING]
+* pass by value parameter to a function.
+* return value from function.
+* constructing new object from existing object.
 
-[None Overloadable Operators]
-::
-:?
-.*
-.
-sizeof
+[NONE OVERLOADABLE OPERATORS]
+::, :?, .*, ., sizeof
 
 [Inheritance]
 access modifiers: public/private(default)/protected
